@@ -6,14 +6,6 @@ import { Check,ExpandMore  } from "@mui/icons-material";
 
 export default function MainContent() {
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
 
  
   return (
@@ -25,7 +17,7 @@ export default function MainContent() {
     <Box className="header">
     <Grid container >
         <Grid item xs={4} sm={6} md={8} >
-          <a href="#home" className="logo">SwiftServe Cloud</a>
+          <a href="#jhs" className="logo">SwiftServe Cloud</a>
         </Grid>
         <Grid item xs={2} sm={1.5} md>
         <a className="Navtext" href="#features">Features</a>
@@ -34,7 +26,7 @@ export default function MainContent() {
         <a className="Navtext" href="#pricing">Pricing</a>
         </Grid>
         <Grid item xs={2} sm={1.5} md>
-        <a className="Navtext" href="#login">Login</a>
+        <a className="Navtext" href="#signup">Login</a>
         </Grid>
         <Grid item xs={2} sm={1.5} md>
         <a className="Navtext" href="#faq">FAQs</a>
@@ -512,12 +504,12 @@ export default function MainContent() {
     </Container>
     </Box>
 
-    <Box className="mainBox" id="login">
+    <Box id="signup">
                 <Grid container className="LoginBox">
                     <Grid item xs={12} md className="LeftContainer">
                         <Box>
                             <Typography variant="h2" className="LoginHeading">Sign In To SwiftServe Cloud</Typography>
-                            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+                            <Box component="form" sx={{ mt: 3 }}>
                             <Grid container spacing={2} marginTop="2rem">
                             <Grid item xs={12} sm={6}>
                                 <TextField
@@ -527,7 +519,7 @@ export default function MainContent() {
                                 fullWidth
                                 id="firstName"
                                 label="First Name"
-                                autoFocus
+                               
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
