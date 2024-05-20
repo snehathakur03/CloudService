@@ -157,7 +157,7 @@ export default function MainContent() {
 
           <Divider sx={{margin:"0px !important"}}/>
 
-          <List sx={{height:"24rem"}}>
+          <List sx={{height:"26rem"}}>
           <ListItem disablePadding sx={{marginTop:"1.5rem"}}> 
               <ListItemIcon>
                 <Check sx={{ fontSize: 14,fontWeight:600, color: 'white' }}/>
@@ -216,7 +216,7 @@ export default function MainContent() {
 
           <Divider sx={{margin:"0px !important"}}/>
 
-          <List sx={{height:"24rem"}}>
+          <List sx={{height:"26rem"}}>
           <ListItem disablePadding sx={{marginTop:"1.5rem"}}> 
               <ListItemIcon>
                 <Check sx={{ fontSize: 14,fontWeight:600, color: 'white' }}/>
@@ -290,7 +290,7 @@ export default function MainContent() {
 
           <Divider sx={{margin:"0px !important"}}/>
 
-          <List sx={{height:"24rem"}}>
+          <List sx={{height:"26rem"}}>
           <ListItem disablePadding sx={{marginTop:"1.5rem"}}> 
               <ListItemIcon>
                 <Check sx={{ fontSize: 14,fontWeight:600, color: 'white' }}/>
@@ -514,7 +514,7 @@ export default function MainContent() {
 
     <Box className="mainBox" id="login">
                 <Grid container className="LoginBox">
-                    <Grid item md className="LeftContainer">
+                    <Grid item xs={12} md className="LeftContainer">
                         <Box>
                             <Typography variant="h2" className="LoginHeading">Sign In To SwiftServe Cloud</Typography>
                             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
@@ -587,7 +587,7 @@ export default function MainContent() {
                         </Box>
                     </Grid>
 
-                    <Grid item md className="RightConatiner" sx={{display:"flex", justifyContent:"center",backgroundColor: "rgb(247 250 252) !important"}}>
+                    <Grid item xs={12} md className="RightConatiner" sx={{display:"flex", justifyContent:"center",backgroundColor: "rgb(247 250 252) !important"}}>
                     <img alt="login" className="illustrationImg" src="https://treact.owaiskhan.me/static/media/login-illustration.39a64f784d3474ef7b31bd14ad6360c7.svg"></img>
                     </Grid>
                 </Grid>
@@ -598,8 +598,8 @@ export default function MainContent() {
     
     <Box className="FeatureBox" sx={{backgroundColor:"rgb(26 32 44)!important", "@media (max-width: 768px)": {paddingLeft:"5rem !important",paddingRight:"5rem !important"},
       "@media (max-width: 425px)": {paddingLeft:"1.5rem !important",paddingRight:"1.5rem !important"}}}>
-      <Grid container>
-        <Grid item xs={8} sm={4} md>
+      <Grid container sx={{"@media (max-width:425px)": {display:"flex", justifyContent:"center"}}}>
+        <Grid item xs={12} sm={4} md>
           <Typography variant="h6" sx={{fontSize:"0.8rem!important", fontWeight:"800 !important",color:"#fff"}}>SwiftServe Cloud</Typography>
           <Typography variant="body1" className="footerText">123 Road, New Startup Building Carter Road, San Francisco California 40234</Typography>
           
@@ -625,7 +625,7 @@ export default function MainContent() {
         
         </Grid>
 
-        <Grid item xs={4} sm={4} md>
+        <Grid item xs={12} sm={4} md  sx={{"@media (max-width:425px)":{marginTop:"3rem"}}}>
         <Typography variant="h6" sx={{fontSize:"0.7rem!important", fontWeight:"600 !important",color:"#fff"}}>QUICK LINKS</Typography>
         <List disablePadding>
           <ListItem  className="footerLinks" >
@@ -647,7 +647,7 @@ export default function MainContent() {
        
         </Grid>
 
-        <Grid item xs={4} sm={4} md sx={{"@media (max-width:425px)":{marginTop:"3rem"}}}>
+        <Grid item xs={12} sm={4} md sx={{"@media (max-width:425px)":{marginTop:"3rem"}}}>
         <Typography variant="h6" sx={{fontSize:"0.7rem!important", fontWeight:"600 !important",color:"#fff"}}>PRODUCT</Typography>
         <List disablePadding>
           <ListItem  className="footerLinks" >
@@ -669,7 +669,7 @@ export default function MainContent() {
        
         </Grid>
 
-        <Grid item xs={4} sm={4} md sx={{"@media (max-width:768px)":{marginTop:"3rem"}}}>
+        <Grid item xs={12} sm={4} md sx={{"@media (max-width:768px)":{marginTop:"3rem"}}}>
         <Typography variant="h6" sx={{fontSize:"0.7rem!important", fontWeight:"600 !important",color:"#fff"}}>LEGAL</Typography>
         <List disablePadding>
           <ListItem  className="footerLinks" >
@@ -692,7 +692,7 @@ export default function MainContent() {
         </Grid>
 
         
-      <Grid item xs={4} sm={4} md sx={{"@media (max-width:768px)":{marginTop:"3rem"}}}>
+      <Grid item xs={12} sm={4} md sx={{"@media (max-width:768px)":{marginTop:"3rem"}}}>
       <Typography variant="h6" sx={{fontSize:"0.7rem!important", fontWeight:"600 !important",color:"#fff"}}>CONTACT</Typography>
         <List disablePadding>
           <ListItem  className="footerLinks" >
