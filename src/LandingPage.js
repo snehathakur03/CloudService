@@ -1,9 +1,19 @@
 import React from "react";
-import { Container,Grid,Box, Typography ,Card,CardContent,Button,ListItem,ListItemIcon, List, Divider,Accordion  ,AccordionSummary ,AccordionDetails,} from '@mui/material';
+import { Container,Grid,Box, Typography ,Card,CardContent,Button,ListItem,ListItemIcon, List, Divider,TextField,FormControlLabel,Checkbox, Link,Accordion  ,AccordionSummary ,AccordionDetails,} from '@mui/material';
 import './App.css';
+import './Login.css';
 import { Check,ExpandMore  } from "@mui/icons-material";
 
 export default function MainContent() {
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    console.log({
+      email: data.get('email'),
+      password: data.get('password'),
+    });
+  };
 
  
   return (
@@ -27,7 +37,7 @@ export default function MainContent() {
         <a className="Navtext" href="#login">Login</a>
         </Grid>
         <Grid item xs={2} sm={1.5} md>
-        <a className="Navtext" href="#signup">Signup</a>
+        <a className="Navtext" href="#faq">FAQs</a>
         </Grid>
         </Grid>
       </Box>
@@ -51,7 +61,7 @@ export default function MainContent() {
       </Grid>
       </Box>
 
-      <Box className="FeatureBox" >
+      <Box className="FeatureBox" id="features">
         <Box paddingLeft="10rem" paddingRight="10rem"  sx={{ "@media (max-width: 768px)": {paddingRight:"0",paddingLeft:"0"}}}>
             <Typography className="headertext" variant="h4" marginBottom="1rem"  textAlign="center !important">Amazing Features</Typography>
             <Typography variant="body2"  textAlign="center !important" style={{fontSize:"0.9rem", color:"rgb(226 232 240)", }}> Our cloud provisions the best servers, with fast SSD, 
@@ -122,7 +132,7 @@ export default function MainContent() {
 
       </Box>
 
-      <Box className="FeatureBox" >
+      <Box className="FeatureBox" id="pricing">
       <Box paddingLeft="10rem" paddingRight="10rem"  sx={{ "@media (max-width: 768px)": {paddingRight:"0",paddingLeft:"0"}}}>
             <Typography className="headertext" variant="h4" marginBottom="1rem"  textAlign="center !important">Affordable Pricing</Typography>
             <Typography variant="body2"  textAlign="center !important" style={{fontSize:"0.9rem", color:"rgb(226 232 240)", }}>  
@@ -389,7 +399,7 @@ export default function MainContent() {
     </Container>
     </Box>
 
-    <Box style={{backgroundColor:"rgb(60 13 153)"}}>
+    <Box style={{backgroundColor:"rgb(60 13 153)"}} id="faq">
     <Container fixed>
       <Box paddingTop="6rem" paddingBottom="6rem">
         <Box>
@@ -501,6 +511,89 @@ export default function MainContent() {
 
     </Container>
     </Box>
+
+    <Box className="mainBox" id="login">
+                <Grid container className="LoginBox">
+                    <Grid item md className="LeftContainer">
+                        <Box>
+                            <Typography variant="h2" className="LoginHeading">Sign In To SwiftServe Cloud</Typography>
+                            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+                            <Grid container spacing={2} marginTop="2rem">
+                            <Grid item xs={12} sm={6}>
+                                <TextField
+                                autoComplete="given-name"
+                                name="firstName"
+                                required
+                                fullWidth
+                                id="firstName"
+                                label="First Name"
+                                autoFocus
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField
+                                required
+                                fullWidth
+                                id="lastName"
+                                label="Last Name"
+                                name="lastName"
+                                autoComplete="family-name"
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField
+                                required
+                                fullWidth
+                                id="email"
+                                label="Email Address"
+                                name="email"
+                                autoComplete="email"
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField
+                                required
+                                fullWidth
+                                name="password"
+                                label="Password"
+                                type="password"
+                                id="password"
+                                autoComplete="new-password"
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <FormControlLabel
+                                control={<Checkbox value="allowExtraEmails" color="primary" />}
+                                label="I want to receive inspiration, marketing promotions and updates via email."
+                                />
+                            </Grid>
+                            </Grid>
+                            <Button
+                            type="submit"
+                            fullWidth
+                            variant="contained"
+                            sx={{ mt: 3, mb: 2 }}
+                            >
+                            Sign Up
+                            </Button>
+                            <Grid container justifyContent="flex-end">
+                            <Grid item>
+                                <Link href="#" variant="body2">
+                                Already have an account? Sign in
+                                </Link>
+                            </Grid>
+                            </Grid>
+                        </Box>
+                        </Box>
+                    </Grid>
+
+                    <Grid item md className="RightConatiner" sx={{display:"flex", justifyContent:"center",backgroundColor: "rgb(247 250 252) !important"}}>
+                    <img alt="login" className="illustrationImg" src="https://treact.owaiskhan.me/static/media/login-illustration.39a64f784d3474ef7b31bd14ad6360c7.svg"></img>
+                    </Grid>
+                </Grid>
+
+
+            </Box>
 
     
     <Box className="FeatureBox" sx={{backgroundColor:"rgb(26 32 44)!important", "@media (max-width: 768px)": {paddingLeft:"5rem !important",paddingRight:"5rem !important"},

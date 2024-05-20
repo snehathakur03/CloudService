@@ -1,0 +1,31 @@
+.mainBox{
+    background-color: rgb(60 13 153);
+    /* min-height: 100vh !important; */
+    padding: 5rem !important;
+}
+
+.LoginBox{
+    background-color: #fff;
+    border-radius: 0.5rem;
+
+}
+
+.LeftContainer{
+    display: flex !important;
+    align-items: center !important;
+    padding: 3rem!important;
+
+}
+
+
+.illustrationImg{
+    width:100%;
+    max-width: 23rem;
+
+}
+
+.LoginHeading{
+    font-size: 1.9rem !important;
+    font-weight: 800 !important;
+}
+
